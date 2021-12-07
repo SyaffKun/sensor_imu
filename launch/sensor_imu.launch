@@ -3,16 +3,16 @@
     <!-- support multi sensor in one master -->
     <arg name="sensor_name" default=""/>   <!-- support multi robot -->
     <arg name="port" default="sensor_imu"/>
-    <arg name="device_frame"       default="imu_module_frame" />
+    <arg name="device_frame"       default="base" />
     <!-- frame -->
     <arg name="imu_frame"       default="imu_frame" /> 
     <arg name="mag_frame"       default="mag_frame" />    
     <!-- pub topic -->
-    <arg name="imu_topic"       default="imu" />
+    <arg name="imu_topic"       default="imu/data" />
     <arg name="mag_topic"       default="mag" />
     <!-- topic freq -->
-    <arg name="imu_freq"       default="200" />
-    <arg name="mag_freq"       default="70" />
+    <arg name="imu_freq"       default="100" />
+    <arg name="mag_freq"       default="1" />
     <arg name="gravity"       default="true" />
     <!--ros namespace name can NOT be empty,so need evaluate use multi robot or not-->
     <group if="$(eval sensor_name == '')">
